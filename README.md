@@ -43,7 +43,7 @@ cd issue-tracker
  
 ## 🎥 Demo
  
-Repo Link — [https://github.com/your-username/issue-tracker](https://github.com/Gihandev/issue-tracker.git)
+Repo Link — https://github.com/Gihandev/issue-tracker.git
  
 ---
  
