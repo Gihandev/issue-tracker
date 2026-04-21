@@ -72,6 +72,6 @@ src/
 ## 👨‍💻 Author
  
 Your Name
-- Portfolio: https://your-portfolio.vercel.app
+- Portfolio: https://gihandev.vercel.app/
 - GitHub: https://github.com/Gihandev
 If you like this project, please give it a ⭐!
