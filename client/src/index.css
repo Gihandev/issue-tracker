@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #080B14;
+    color: #E2E8F0;
+    font-family: 'Syne', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: rgba(79, 142, 247, 0.3);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.06];
+  }
+  .glass-hover {
+    @apply hover:bg-white/[0.06] hover:border-white/[0.1] transition-all duration-300;
+  }
+  .btn-primary {
+    @apply bg-accent text-white font-semibold px-5 py-2.5 rounded-xl 
+           hover:bg-blue-500 active:scale-95 transition-all duration-200
+           shadow-glow-blue hover:shadow-glow-blue;
+  }
+  .btn-ghost {
+    @apply glass glass-hover text-slate-300 font-medium px-5 py-2.5 rounded-xl 
+           active:scale-95 transition-all duration-200;
+  }
+  .btn-danger {
+    @apply bg-neon-red/20 text-neon-red border border-neon-red/30 font-semibold px-5 py-2.5 rounded-xl 
+           hover:bg-neon-red/30 active:scale-95 transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-void/80 border border-border rounded-xl px-4 py-3 
+           text-slate-200 placeholder-slate-600 outline-none
+           focus:border-accent/60 focus:ring-1 focus:ring-accent/20
+           transition-all duration-200 font-sans text-sm;
+  }
+  .card {
+    @apply glass rounded-2xl shadow-card hover:shadow-card-hover 
+           transition-all duration-300;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold;
+  }
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 
+           hover:text-white hover:bg-white/[0.05] transition-all duration-200 font-medium;
+  }
+  .sidebar-link.active {
+    @apply text-white bg-accent/10 border border-accent/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-neon-blue via-neon-cyan to-accent bg-clip-text text-transparent;
+  }
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(79, 142, 247, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 142, 247, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+  }
+}
