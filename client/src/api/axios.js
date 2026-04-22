@@ -3,7 +3,7 @@ import { useAuthStore } from "../store/useAuthStore";
 
 // axios instance with base URL and JSON headers
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://issue-tracker-awcm.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },
